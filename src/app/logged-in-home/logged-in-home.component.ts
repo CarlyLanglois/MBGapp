@@ -12,4 +12,10 @@ export class LoggedInHomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  show=false;
+
+  clicked() {
+    this.show = !this.show;
+  }
+
 }

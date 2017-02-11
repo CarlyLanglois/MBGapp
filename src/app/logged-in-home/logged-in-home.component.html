@@ -1,5 +1,5 @@
 <!--Member Home Section-->
-<div id="member-home-section">
+<div id="member-home-section" class="container-fluid">
     <!--Renew-->
     <div class="col-sm-6 col-md-3">
         <div id="join" class="img-responsive img-circle">
@@ -28,11 +28,13 @@
     <!--Member Events-->
     <div class="col-sm-6 col-md-3">
         <div id="events-bubble" class="img-responsive img-circle">
-            <a id="home-events-btn">
+            <a (click)="clicked()" id="home-events-btn">
                 MEMBER EVENTS
             </a>
         </div>
     </div>
 </div>
 
-<app-events-calendar></app-events-calendar>
+<div *ngIf="show" class="container=fluid">
+    <app-events-calendar></app-events-calendar>
+</div>
