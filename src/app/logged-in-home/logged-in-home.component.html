@@ -3,7 +3,7 @@
     <!--Renew-->
     <div class="col-sm-6 col-md-3">
         <div id="join" class="img-responsive img-circle">
-            <a href="https://support.missouribotanicalgarden.org/pages/membership/membership-form">
+            <a (click)="clickedRenewForm()" id="home-renew-btn">
                 RENEW
             </a>
         </div>
@@ -11,7 +11,7 @@
     <!--Give a Gift Membership-->
     <div class="col-sm-6 col-md-3">
         <div id="gift-membership" class="img-responsive img-circle">
-            <a href="https://support.missouribotanicalgarden.org/giftmembership">
+            <a (click)="clickedGiftMembershipForm()" id="home-gift-membership-btn">
                 GIVE A GIFT MEMBERSHIP
             </a>
         </div>
@@ -41,4 +41,12 @@
 
 <div *ngIf="showFAQs" class="container=fluid">
     <app-faqs></app-faqs>
+</div>
+
+<div *ngIf="showGiftMembershipForm" class="container=fluid">
+    <app-gift-membership-form></app-gift-membership-form>
+</div>
+
+<div *ngIf="showRenewForm" class="container=fluid">
+    <app-renew-form></app-renew-form>
 </div>

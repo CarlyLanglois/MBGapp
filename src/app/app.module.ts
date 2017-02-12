@@ -10,6 +10,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
 import { EventsCalendarComponent } from './events-calendar/events-calendar.component';
 import { FaqsComponent } from './faqs/faqs.component';
+import { GiftMembershipFormComponent } from './gift-membership-form/gift-membership-form.component';
+import { RenewFormComponent } from './renew-form/renew-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FaqsComponent } from './faqs/faqs.component';
     DashboardComponent,
     LoggedInHomeComponent,
     EventsCalendarComponent,
-    FaqsComponent
+    FaqsComponent,
+    GiftMembershipFormComponent,
+    RenewFormComponent
   ],
   imports: [
     BrowserModule,
