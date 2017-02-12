@@ -12,6 +12,7 @@ import { EventsCalendarComponent } from './events-calendar/events-calendar.compo
 import { FaqsComponent } from './faqs/faqs.component';
 import { GiftMembershipFormComponent } from './gift-membership-form/gift-membership-form.component';
 import { RenewFormComponent } from './renew-form/renew-form.component';
+import { JoinFormComponent } from './join-form/join-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RenewFormComponent } from './renew-form/renew-form.component';
     EventsCalendarComponent,
     FaqsComponent,
     GiftMembershipFormComponent,
-    RenewFormComponent
+    RenewFormComponent,
+    JoinFormComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,10 @@ import { RenewFormComponent } from './renew-form/renew-form.component';
         {
             path: 'logged-in-home',
             component: LoggedInHomeComponent
+        },
+        {
+            path: 'join-form',
+            component: JoinFormComponent
         },
         {
             path: '',
