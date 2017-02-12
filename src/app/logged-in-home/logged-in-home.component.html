@@ -19,7 +19,7 @@
     <!-- FAQs -->
     <div class="col-sm-6 col-md-3">
         <div id="faqs" class="img-responsive img-circle">
-            <a id="home-faqs-btn">
+            <a (click)="clickedFAQs()" id="home-faqs-btn">
                 MEMBER BENEFITS AND FAQS
             </a>
         </div>
@@ -28,13 +28,17 @@
     <!--Member Events-->
     <div class="col-sm-6 col-md-3">
         <div id="events-bubble" class="img-responsive img-circle">
-            <a (click)="clicked()" id="home-events-btn">
+            <a (click)="clickedEvents()" id="home-events-btn">
                 MEMBER EVENTS
             </a>
         </div>
     </div>
 </div>
 
-<div *ngIf="show" class="container=fluid">
+<div *ngIf="showEventsCalendar" class="container=fluid">
     <app-events-calendar></app-events-calendar>
+</div>
+
+<div *ngIf="showFAQs" class="container=fluid">
+    <app-faqs></app-faqs>
 </div>

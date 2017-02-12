@@ -9,6 +9,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
 import { EventsCalendarComponent } from './events-calendar/events-calendar.component';
+import { FaqsComponent } from './faqs/faqs.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EventsCalendarComponent } from './events-calendar/events-calendar.compo
     LoginFormComponent,
     DashboardComponent,
     LoggedInHomeComponent,
-    EventsCalendarComponent
+    EventsCalendarComponent,
+    FaqsComponent
   ],
   imports: [
     BrowserModule,
