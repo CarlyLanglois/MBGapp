@@ -11,9 +11,5 @@ $(document).ready(function(){
         }
     });
 
-    // ---- CALENDAR, grab calendar info from fullCalendar and our event objects:
-    $("#calendar").fullCalendar({
-        // put your options and callbacks here (from fullCalendar)
-
-    });
+    
 });

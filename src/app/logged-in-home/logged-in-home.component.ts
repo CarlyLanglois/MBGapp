@@ -12,7 +12,7 @@ export class LoggedInHomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  showEventsCalendar: boolean = true;
+  showEventsCalendar: boolean = false;
   showFAQs: boolean = false;
   showGiftMembershipForm: boolean = false;
   showRenewForm: boolean = false;

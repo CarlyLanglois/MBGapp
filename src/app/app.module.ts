@@ -13,6 +13,8 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { GiftMembershipFormComponent } from './gift-membership-form/gift-membership-form.component';
 import { RenewFormComponent } from './renew-form/renew-form.component';
 import { JoinFormComponent } from './join-form/join-form.component';
+import { CalendarComponent } from "angular2-fullcalendar/src/calendar/calendar";
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { JoinFormComponent } from './join-form/join-form.component';
     FaqsComponent,
     GiftMembershipFormComponent,
     RenewFormComponent,
-    JoinFormComponent
+    JoinFormComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
