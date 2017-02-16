@@ -18,14 +18,17 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li id="navbar-login-btn">
-            <a routerLink="/login-form">Login</a>
-        </li>
-        <li id="navbar-logout-btn">
-            <a routerLink="/dashboard">Log Out</a>
-        </li>
-        <br>
-        <li>MEMBER ID:</li><li id="navbar-id">#####</li>
+
+        <!--Login Button-->
+        <div *ngIf="showLogin">
+            <app-login-btn></app-login-btn>
+        </div>
+
+        <!--Logout Button-->
+
+        <app-logout-btn></app-logout-btn>
+
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

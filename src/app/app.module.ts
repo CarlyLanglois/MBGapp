@@ -14,6 +14,8 @@ import { GiftMembershipFormComponent } from './gift-membership-form/gift-members
 import { RenewFormComponent } from './renew-form/renew-form.component';
 import { JoinFormComponent } from './join-form/join-form.component';
 import { CalendarComponent } from 'angular2-fullcalendar/src/calendar/calendar';
+import { LoginBtnComponent } from './login-btn/login-btn.component';
+import { LogoutBtnComponent } from './logout-btn/logout-btn.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { CalendarComponent } from 'angular2-fullcalendar/src/calendar/calendar';
     GiftMembershipFormComponent,
     RenewFormComponent,
     JoinFormComponent,
-    CalendarComponent
+    CalendarComponent,
+    LoginBtnComponent,
+    LogoutBtnComponent
   ],
   imports: [
     BrowserModule,

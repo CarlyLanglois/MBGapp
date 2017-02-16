@@ -12,6 +12,7 @@ export class LoggedInHomeComponent implements OnInit {
   ngOnInit() {
   }
 
+
   showEventsCalendar: boolean = false;
   showFAQs: boolean = false;
   showGiftMembershipForm: boolean = false;
@@ -43,67 +44,76 @@ export class LoggedInHomeComponent implements OnInit {
   }
 
   calendarOptions: Object = {
-        
+
          events: [
            {
-               title: 'Hello?',
-               start: '2017-02-14'
+               title: 'Trivia Night - Garden Style',
+               start: '2017-02-18T18:00:00',
+               end: '2017-02-18T22:00:00'
            },
            {
-             title: 'All Day Event',
-             start: '2016-09-01'
+             title: 'Science and Sustainability Open House',
+             start: '2017-02-25T13:00:00',
+             end: '2017-02-25T16:00:00'
            },
            {
-             title: 'Long Event',
-             start: '2016-09-07',
-             end: '2016-09-10'
+             title: 'Science and Sustainability Open House',
+             start: '2017-02-26T13:00:00',
+             end: '2017-02-26T16:00:00'
            },
            {
-             id: 999,
-             title: 'Repeating Event',
-             start: '2016-09-09T16:00:00'
+             title: 'Member Speaker Series: Gardening with Native Plants',
+             start: '2017-03-07T11:00:00',
+             end: '2017-03-07T12:00:00',
            },
            {
-             id: 999,
-             title: 'Repeating Event',
-             start: '2016-09-16T16:00:00'
+             title: 'Daffodil Dash 5k Trail Run',
+             start: '2017-04-08T09:00:00',
+             end: '2017-04-08T10:00:00'
            },
            {
-             title: 'Conference',
-             start: '2016-09-11',
-             end: '2016-09-13'
+             title: 'Eggstravaganze',
+             start: '2017-04-08T10:00:00',
+             end: '2017-04-08T13:00:00'
            },
            {
-             title: 'Meeting',
-             start: '2016-09-12T10:30:00',
-             end: '2016-09-12T12:30:00'
+             title: 'Member Speaker Series: Best New Plants for the Home Landscape',
+             start: '2017-04-18T11:00:00',
+             end: '2017-04-18T12:00:00',
            },
            {
-             title: 'Lunch',
-             start: '2016-09-12T12:00:00'
+             title: 'Herb Days',
+             start: '2017-04-27T17:00:00',
+             end: '2017-04-29T17:00:00'
            },
            {
-             title: 'Meeting',
-             start: '2016-09-12T14:30:00'
+             title: 'Tulip Trot',
+             start: '2017-04-30T07:00:00',
+             end: '2017-04-30T09:00:00'
            },
            {
-             title: 'Happy Hour',
-             start: '2016-09-12T17:30:00'
+             title: 'St. Louis Garden Tour',
+             start: '2017-06-11T09:30:00',
+             end: '2017-06-11T16:30:00'
            },
            {
-             title: 'Dinner',
-             start: '2016-09-12T20:00:00'
+             title: 'Garden Gallop 5K',
+             start: '2017-06-25T07:00:00',
+             end: '2017-06-25T09:00:00'
            },
            {
-             title: 'Birthday Party',
-             start: '2016-09-13T07:00:00'
-           },
-           {
-             title: 'Click for Google',
-             url: 'http://google.com/',
-             start: '2016-09-28'
+             title: "Henry Shaw's Birthday Celebration!" ,
+             start: '2017-07-24T09:00:00',
+             end: '2017-07-24T17:00:00'
            }
-         ]
+       ],
+       fixedWeekCount: false,
+       eventClick: function(event){
+           $(this).attr('data-toggle', 'popover');
+           $(this).attr('title', 'Popover Header');
+           $(this).attr('data-content', 'Content!!');
+           console.log($(this));
+       }
        };
 
 

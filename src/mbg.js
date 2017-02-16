@@ -11,5 +11,8 @@ $(document).ready(function(){
         }
     });
 
-    
+    // --- POPOVERS: enables Bootstrap POPOVERS
+    $('[data-toggle="popover"]').popover();
+
+
 });
