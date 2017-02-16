@@ -24,10 +24,10 @@
             <app-login-btn></app-login-btn>
         </div>
 
-        <!--Logout Button-->
-
-        <app-logout-btn></app-logout-btn>
-
+        <!--Logout Button and Member ID-->
+        <div *ngIf="showLogout">
+            <app-logout-btn></app-logout-btn>
+        </div>
 
       </ul>
     </div><!-- /.navbar-collapse -->

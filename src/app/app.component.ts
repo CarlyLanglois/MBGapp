@@ -8,9 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
     showLogin: boolean = true;
-
-    clickedLoginBtn(){
-        this.showLogin = !this.showLogin;
-    }
+    showLogout: boolean = false;
+    
 
      }

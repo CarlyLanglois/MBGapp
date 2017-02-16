@@ -2,18 +2,39 @@
 <div id="login-section" class="col-md-6">
 
     <div id="login-form">
+
         <form class="form-inline">
+            {{diagnostic}}
             <div class="form-group">
-                <label class="control-label">Member ID</label>
-                <input type="text" class="form-control" id="member-id-attempt"><br>
+                <label for="id" class="control-label">Member ID</label>
+                <input type="text" class="form-control" id="memberid" required [(ngModel)]="model.memberid" name="memberid" #memberid="ngModel">
+                <div [hidden]="memberid.valid || memberid.pristine" class="alert alert-danger">
+                    Member ID required
+                </div>
+                <br>TODO: remove this: {{memberid.className}}
             </div>
-            <input id="login-submit" class="btn" type="submit" routerLink="/logged-in-home">
+
+            <div class="form-group">
+                <label for="level" class="control-label">Membership Level</label>
+                <select class="form-control" id="level" required [(ngModel)]="model.level" name="level">
+                    <option *ngFor="let lev of levels" [value]="lev">{{lev}}</option>
+                </select>
+            </div>
+
+            <input id="login-submit" class="btn" (click) = "clickedLoginBtn()" type="submit" routerLink="/logged-in-home">
+
         </form>
+
     </div>
+
     <br>
+
     <div>
-        <button class="btn" routerLink="/join-form">
+        <button class="btn btn-sucess" routerLink="/join-form">
             Not a member yet? Join us!
         </button>
+        <button type="button" class="btn btn-default" (click)="newMember()">New Member</button>
+
     </div>
+
 </div>
