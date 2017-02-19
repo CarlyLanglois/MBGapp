@@ -10,26 +10,28 @@
         <span class="icon-bar"></span>
       </button>
       <div class="navbar-brand">
-          <img id="brand-img" src="images/img-name.jpg" alt="Missouri Botanical Garden">
+          <img id="brand-img" class="img-rounded" src="images/logo-inline.gif" alt="Missouri Botanical Garden">
       </div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-      <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
 
-        <!--Login Button-->
-        <div *ngIf="showLogin">
-            <app-login-btn></app-login-btn>
-        </div>
 
-        <!--Logout Button and Member ID-->
-        <div *ngIf="showLogout">
-            <app-logout-btn></app-logout-btn>
-        </div>
+            <!--Login Button-->
+            <li>
+                <app-login-btn></app-login-btn>
+            </li>
 
-      </ul>
+            <!--Logout Button and Member ID-->
+            <li *ngIf="this.path !== '/'">
+                <app-logout-btn></app-logout-btn>
+            </li>
+
+        </ul>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -39,24 +41,26 @@
 <router-outlet></router-outlet>
 
 <!-- Contact Us Section -->
-<div id="contact_us_section">
-    <div class="col-md-12">
-        <div class="row">
-            <h2>Contact Us</h2>
-            <div class="col-xs-offset-1 col-md-3">
-                <h3>Member Services</h3>
-                <ul>
-                    <li>Call: 314 577 5118</li>
-                    <li>Email: <a href="mailto:membership@mobot.org">membership@mobot.org</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-offset-1 col-md-7">
+<div id="contact_us_section" class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <h2>Contact Us</h2>
+                <div class="col-xs-offset-1 col-md-3">
+                    <h3>Member Services</h3>
+                    <ul>
+                        <li>Call: 314 577 5118</li>
+                        <li>Email: <a href="mailto:membership@mobot.org">membership@mobot.org</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-offset-1 col-md-7">
 
-                <h3>President’s, Henry Shaw, Raven,	and Chairmen’s Circle Societies</h3>
-                <ul>
-                    <li>Call: 314 577 9500</li>
-                    <li>Email: <a href="mailto:donors@mobot.org">donors@mobot.org</a></li>
-                </ul>
+                    <h3>President’s, Henry Shaw, Raven,	and Chairmen’s Circle Societies</h3>
+                    <ul>
+                        <li>Call: 314 577 9500</li>
+                        <li>Email: <a href="mailto:donors@mobot.org">donors@mobot.org</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

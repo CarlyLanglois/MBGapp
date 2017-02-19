@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
+import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
 
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
@@ -59,7 +60,8 @@ import { LogoutBtnComponent } from './logout-btn/logout-btn.component';
             redirectTo: '/dashboard',
             pathMatch: 'full'
         }
-    ])
+    ]),
+    Ng2Bs3ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,7 @@
-h1 {
-    padding-top: 20%;
-    padding-bottom: 20%;
+.jumbotron {
+    background-image: url(http://www.missouribotanicalgarden.org/Portals/0/Gardens/Magnolia%20Walk/Images/MagnoliaWalk.jpg);
+    background-size: cover;
+    padding-top: 30%;
+    text-shadow: 2px 2px 2px black;
+    color: #c9d7b2;
 }

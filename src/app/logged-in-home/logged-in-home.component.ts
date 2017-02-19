@@ -108,11 +108,23 @@ export class LoggedInHomeComponent implements OnInit {
            }
        ],
        fixedWeekCount: false,
+       eventRender: function (event, element) {
+           element.popover({
+               title: event.name,
+               placement: 'right',
+               content: + '<br />Start: ' + event.start + '<br />End: ' + event.end,
+           });
+       },
        eventClick: function(event){
-           $(this).attr('data-toggle', 'popover');
-           $(this).attr('title', 'Popover Header');
-           $(this).attr('data-content', 'Content!!');
-           console.log($(this));
+
+           //$(this).click("modal.open()");
+           //event.value
+          // $(this).attr('data-toggle', 'popover');
+           //$(this).attr('title', 'Popover Header');
+           //$(this).attr('data-content', 'Content!!');
+           //$(this).attr('style', 'z-index:99');
+          // $(this).popover({container:'body'}).popover('show')
+           //console.log($(this));
        }
        };
 

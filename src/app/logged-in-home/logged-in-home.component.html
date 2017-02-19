@@ -1,52 +1,70 @@
 <!--Member Home Section-->
 <div id="member-home-section" class="container-fluid">
-    <!--Renew-->
-    <div class="col-sm-6 col-md-3">
-        <div id="join" class="img-responsive img-circle">
-            <a (click)="clickedRenewForm()" id="home-renew-btn">
-                RENEW
-            </a>
+    <div class="row">
+        <!--Renew-->
+        <div class="col-sm-6 col-md-3">
+            <div id="join" class="img-responsive img-circle">
+                <a (click)="clickedRenewForm()" id="home-renew-btn">
+                    RENEW
+                </a>
+            </div>
         </div>
-    </div>
-    <!--Give a Gift Membership-->
-    <div class="col-sm-6 col-md-3">
-        <div id="gift-membership" class="img-responsive img-circle">
-            <a (click)="clickedGiftMembershipForm()" id="home-gift-membership-btn">
-                GIVE A GIFT MEMBERSHIP
-            </a>
+        <!--Give a Gift Membership-->
+        <div class="col-sm-6 col-md-3">
+            <div id="gift-membership" class="img-responsive img-circle">
+                <a (click)="clickedGiftMembershipForm()" id="home-gift-membership-btn">
+                    GIVE A GIFT MEMBERSHIP
+                </a>
+            </div>
         </div>
-    </div>
-    <!-- FAQs -->
-    <div class="col-sm-6 col-md-3">
-        <div id="faqs" class="img-responsive img-circle">
-            <a (click)="clickedFAQs()" id="home-faqs-btn">
-                MEMBER BENEFITS AND FAQS
-            </a>
-        </div>
+        <!-- FAQs -->
+        <div class="col-sm-6 col-md-3">
+            <div id="faqs" class="img-responsive img-circle">
+                <a (click)="clickedFAQs()" id="home-faqs-btn">
+                    MEMBER BENEFITS AND FAQS
+                </a>
+            </div>
 
-    </div>
-    <!--Member Events-->
-    <div class="col-sm-6 col-md-3">
-        <div id="events-bubble" class="img-responsive img-circle">
-            <a (click)="clickedEvents()" id="home-events-btn">
-                MEMBER EVENTS
-            </a>
+        </div>
+        <!--Member Events-->
+        <div class="col-sm-6 col-md-3">
+            <div id="events-bubble" class="img-responsive img-circle">
+                <a (click)="clickedEvents()" id="home-events-btn">
+                    MEMBER EVENTS
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
-<div *ngIf="showEventsCalendar" class="container=fluid">
-    <angular2-fullcalendar [options]="calendarOptions"></angular2-fullcalendar>
+<div *ngIf="showEventsCalendar" class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <angular2-fullcalendar class="col-md-12" [options]="calendarOptions"></angular2-fullcalendar>
+        </div>
+    </div>
 </div>
 
-<div *ngIf="showFAQs" class="container=fluid">
-    <app-faqs></app-faqs>
+<div *ngIf="showFAQs" class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <app-faqs></app-faqs>
+        </div>
+    </div>
 </div>
 
-<div *ngIf="showGiftMembershipForm" class="container=fluid">
-    <app-gift-membership-form></app-gift-membership-form>
+<div *ngIf="showGiftMembershipForm" class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <app-gift-membership-form></app-gift-membership-form>
+        </div>
+    </div>
 </div>
 
-<div *ngIf="showRenewForm" class="container=fluid">
-    <app-renew-form></app-renew-form>
+<div *ngIf="showRenewForm" class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <app-renew-form></app-renew-form>
+        </div>
+    </div>
 </div>

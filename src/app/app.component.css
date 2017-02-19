@@ -1,1 +1,12 @@
+.navbar{
+    background-color: transparent;
+    margin-bottom: 20%;
+}
 
+main{
+    align-content: center;
+}
+
+* {
+    color: #295307;
+}

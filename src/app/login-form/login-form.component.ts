@@ -10,10 +10,12 @@ import { Member }    from 'app/member';
 
 export class LoginFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(){ }
 
-  ngOnInit() {
+
+  ngOnInit(){
   }
+
 
  levels = ['Individual', 'Garden Senior',
            'Garden', 'Friends and Family'];
