@@ -1,10 +1,16 @@
-#login-section {
-    padding-top: 40%;
+#login-form {
+    padding-top: 20%;
 }
+
 
 .ng-valid[required], .ng-valid.required  {
   border-left: 5px solid #42A948; /* green */
 }
 .ng-invalid:not(form)  {
   border-left: 5px solid #a94442; /* red */
+}
+
+* {
+    color: #295307;
+    text-shadow: 1px 1px 1px #c9d7b2;
 }

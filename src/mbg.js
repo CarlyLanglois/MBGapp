@@ -3,11 +3,11 @@ $(document).ready(function(){
     // ---- NAVBAR: brand image changes when the window scrolls up and down
     $(window).scroll(function() {
         if (($(document).scrollTop() > 100) | ($(window).width() < 800)){
-            $(".navbar").addClass("minimized");
-            $("#brand-img").attr("src", "images/logo-inline-mini.gif");
+
+            $("#brand-img").attr("src", "images/logo-inline-mini-transparent.gif");
         } else {
-            $(".navbar").removeClass("minimized");
-            $("#brand-img").attr("src", "images/logo-inline.gif");
+            
+            $("#brand-img").attr("src", "images/logo-inline-transparent.gif");
         }
     });
 

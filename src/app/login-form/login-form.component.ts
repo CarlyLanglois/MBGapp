@@ -20,14 +20,17 @@ export class LoginFormComponent implements OnInit {
  levels = ['Individual', 'Garden Senior',
            'Garden', 'Friends and Family'];
 
- model = new Member(232111, 'Test Member', this.levels[0], '02/28/2018');
+ ids = [232111, 235788, 248900]
+
+ model = new Member(this.ids[0], 'Test Member', this.levels[0], '02/28/2018');
+ model2 = new Member(this.ids[1], 'Test Member 2', this.levels[3], '03/30/2018');
 
  submitted = false;
 
  onSubmit() { this.submitted = true; }
 
  newMember() {
-  this.model = new Member(249000, '', this.levels[0], '');
+  this.model = new Member(this.ids[2], '', this.levels[0], '');
 }
 
 

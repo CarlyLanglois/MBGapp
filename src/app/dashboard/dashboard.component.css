@@ -1,7 +1,9 @@
 .jumbotron {
     background-image: url(http://www.missouribotanicalgarden.org/Portals/0/Gardens/Magnolia%20Walk/Images/MagnoliaWalk.jpg);
     background-size: cover;
-    padding-top: 30%;
+    font-size: 3vw;
+    padding-top: 20%;
     text-shadow: 2px 2px 2px black;
     color: #c9d7b2;
+    box-shadow: 0 2px 10px rgba(1,1,1,.2);
 }
