@@ -13,22 +13,26 @@
 }
 
 #contact-us-section h2 {
-    font-size: 3vw;
+    font-size: 18px;
 }
 
 #contact-us-section h3 {
-    font-size: 2vw;
+    font-size: 16px;
 }
 
 #contact-us-section li {
-    font-size: 2vw;
+    font-size: 14px;
 }
 
 #contact-us-section{
-    padding-top: 10%;
     text-shadow: 1px 1px 1px #c9d7b2;
 }
 
 .navbar li {
     float: right;
+}
+
+ul{
+    padding-top: 2%;
+    padding-right: 1%;
 }

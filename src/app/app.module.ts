@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule }   from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
+import { PopoverModule } from "ng2-popover";
 
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
@@ -17,6 +18,8 @@ import { JoinFormComponent } from './join-form/join-form.component';
 import { CalendarComponent } from 'angular2-fullcalendar/src/calendar/calendar';
 import { LoginBtnComponent } from './login-btn/login-btn.component';
 import { LogoutBtnComponent } from './logout-btn/logout-btn.component';
+
+import { MembersService }  from './members.service';
 
 
 @NgModule({
@@ -61,9 +64,10 @@ import { LogoutBtnComponent } from './logout-btn/logout-btn.component';
             pathMatch: 'full'
         }
     ]),
-    Ng2Bs3ModalModule
+    Ng2Bs3ModalModule,
+    PopoverModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ MembersService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

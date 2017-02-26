@@ -108,14 +108,28 @@ export class LoggedInHomeComponent implements OnInit {
            }
        ],
        fixedWeekCount: false,
-       eventRender: function (event, element) {
-           element.popover({
-               title: event.name,
-               placement: 'right',
-               content: + '<br />Start: ' + event.start + '<br />End: ' + event.end,
-           });
+       //eventColor: '#c9d7b2',
+       eventRender: function(event, element){
+           console.log(element.html());
        },
-       eventClick: function(event){
+
+       eventClick: function(event) {
+
+            $(this).attr('data-toggle','modal');
+            $(this).attr('data-target', '#myModal');
+            //$(this).css('background-color', 'red');
+
+        }
+
+
+
+       //eventClick: function(event){
+
+          // element.popover({
+             //  title: event.name,
+              // placement: 'right',
+               //content: + '<br />Start: ' + event.start + '<br />End: ' + event.end,
+           //});
 
            //$(this).click("modal.open()");
            //event.value
@@ -125,8 +139,9 @@ export class LoggedInHomeComponent implements OnInit {
            //$(this).attr('style', 'z-index:99');
           // $(this).popover({container:'body'}).popover('show')
            //console.log($(this));
+       //}
        }
-       };
+
 
 
 }

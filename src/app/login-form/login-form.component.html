@@ -7,17 +7,14 @@
 
                 <div class="form-group">
                     <label for="id" class="control-label">Member ID</label>
-                    <input type="text" class="form-control" id="memberid" required [(ngModel)]="model.memberid" name="memberid" #memberid="ngModel">
-                    <div [hidden]="memberid.valid || memberid.pristine" class="alert alert-danger">
-                        Member ID required to login
-                    </div>
-
+                    <input #memberid type="text" class="form-control" id="memberid" required >
+                    <p>{{value}}</p>
                 </div>
 
-
-                <button id="login-submit" class="btn btn-default" type="submit" [disabled]="!loginForm.form.valid" routerLink="/logged-in-home">
+                <button (click)="onSubmit(memberid.value)" routerLink="/logged-in-home" id="login-submit" class="btn btn-default" type="submit">
                     Login
                 </button>
+                
 
             </form>
             <br>

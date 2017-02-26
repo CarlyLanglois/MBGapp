@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Member }    from 'app/member';
+import { MEMBERS }    from 'app/mock-members';
 
 @Component({
   selector: 'app-login-form',
@@ -16,19 +16,31 @@ export class LoginFormComponent implements OnInit {
   ngOnInit(){
   }
 
+  members = MEMBERS;
 
- levels = ['Individual', 'Garden Senior',
-           'Garden', 'Friends and Family'];
+  ids = ['232111', '235788', '248900'];
 
- ids = [232111, 235788, 248900]
+  value = '';
 
- model = new Member(this.ids[0], 'Test Member', this.levels[0], '02/28/2018');
- model2 = new Member(this.ids[1], 'Test Member 2', this.levels[3], '03/30/2018');
 
- submitted = false;
 
- onSubmit() { this.submitted = true; }
+  onSubmit(value: string){
+      this.value = value;
 
+      if (this.ids.indexOf(value) != -1){
+          console.log('this works!')
+      }
+      else{
+          console.log('problem!')
+      }
+  }
+
+
+
+
+
+
+/*
  newMember() {
   this.model = new Member(this.ids[2], '', this.levels[0], '');
 }
@@ -36,5 +48,5 @@ export class LoginFormComponent implements OnInit {
 
  // TODO: Remove this when we're done
  get diagnostic() { return JSON.stringify(this.model); }
-
+*/
 }

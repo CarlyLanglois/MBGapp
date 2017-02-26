@@ -1,0 +1,11 @@
+.panel-title {
+  color: #295307;
+}
+
+.panel-default>.panel-heading{
+  background-color: #c9d7b2;
+}
+
+#faqs-section{
+    padding-top: 2%;
+}

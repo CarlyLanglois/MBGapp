@@ -3,19 +3,20 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
+            <div class="navbar-brand container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img id="brand-img" class="img-rounded" src="images/logo-inline-transparent.gif" alt="Missouri Botanical Garden">
+                    </div>
+                </div>
+            </div>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <div class="navbar-brand container-fluid">
-                <div class="row">
-                    <div class="col-md-8">
-                        <img id="brand-img" class="img-responsive img-rounded" src="images/logo-inline-transparent.gif" alt="Missouri Botanical Garden">
-                    </div>
-                </div>
-            </div>
+
         </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,7 +31,7 @@
             </li>
 
             <!--Logout Button and Member ID-->
-            <li *ngIf="this.path !== '/'">
+            <li *ngIf="">
                 <app-logout-btn></app-logout-btn>
             </li>
 
