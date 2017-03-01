@@ -79,3 +79,11 @@ angular2-fullcalendar{
 #events-bubble a{
     color: #c9d7b2;
 }
+
+#myModal{
+    color: #295307;
+}
+
+#myModalLabel{
+    text-align: center;
+}
