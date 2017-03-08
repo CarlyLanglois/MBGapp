@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Routes ,  Router} from '@angular/router';
+import { MembersService }  from '../members.service';
+
 
 import { MEMBERS }    from 'app/mock-members';
 
@@ -9,28 +12,34 @@ import { MEMBERS }    from 'app/mock-members';
 })
 
 export class LoginFormComponent implements OnInit {
+    //ids = ['232111', '235788', '248900'];
+    members: any[];
 
-  constructor(){ }
+
+    constructor( private router: Router,
+      private ms: MembersService ){
+          this.members = this.ms.getMembers();
+          console.log(this.members);
+          //console.log(this.ms.checkIfValidMember())
+      }
 
 
   ngOnInit(){
+
   }
-
-  members = MEMBERS;
-
-  ids = ['232111', '235788', '248900'];
-
-  value = '';
 
 
 
   onSubmit(value: string){
-      this.value = value;
 
-      if (this.ids.indexOf(value) != -1){
-          console.log('this works!')
+      //this.value = this.ms.checkIfValidMember();
+
+      if (this.ms.isValidMember(value)){
+      //if (this.members.includes(value)){
+          console.log('this works!');
+          this.router.navigate(['./logged-in-home']);
       }
-      else{
+      else {
           console.log('problem!')
       }
   }
